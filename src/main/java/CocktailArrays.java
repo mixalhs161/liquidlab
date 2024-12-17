@@ -74,5 +74,5 @@ String[][] cocktailIng = {
 
 
 
-    int[][] transformedCoctailIng = CocktailArraysTransform.transformCoctailIng(cocktailIng);
+    int[][] transformedCoctailIng = CocktailArraysTransform.transformCocktailIng(cocktailIng);
 }
