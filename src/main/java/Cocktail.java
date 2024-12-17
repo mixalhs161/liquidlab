@@ -1,4 +1,4 @@
-public class Coctail {
+public class Cocktail {
 
     // Μεταβλητές στιγμιότυπου
     private String base;      // Βάση (π.χ. whiskey, gin, etc.)
@@ -6,7 +6,7 @@ public class Coctail {
     private String intensity; // Ένταση (π.χ. light, medium, strong)
 
     // Κατασκευαστής
-    public Coctail(String base, String flavor, String intensity) {
+    public Cocktail(String base, String flavor, String intensity) {
         this.base = base;
         this.flavor = flavor;
         this.intensity = intensity;
@@ -40,8 +40,7 @@ public class Coctail {
 
     // Μέθοδος toString για ευκολία στην εκτύπωση του cocktail
     @Override
-    public String toString(){
+    public String toString() {
         return "Cocktail: " + base + ", " + intensity + ", " + flavor;
-    }    
+    };
 }
-    

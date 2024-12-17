@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class CoctailRecommender {
+public class CocktailRecommender {
     private final static int EXPC2 = 3; //expected remaining coctails in the second search
     public static LinkedList <Integer> Indexes = new LinkedList<Integer>(); // Creation of a list in order to store the indexes of the cocktails that satisfy the user's choice.
     // Creation of a method that insert's the indexes of the cocktails in the list which statisfy the user's first choice.
@@ -14,8 +14,8 @@ public class CoctailRecommender {
 
 
     }
-        public CoctailRecommender(LinkedList<Integer> Indexes) {
-            CoctailRecommender.Indexes = Indexes;
+        public CocktailRecommender(LinkedList<Integer> Indexes) {
+            CocktailRecommender.Indexes = Indexes;
         }
 
 
