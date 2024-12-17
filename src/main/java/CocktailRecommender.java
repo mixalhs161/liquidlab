@@ -8,7 +8,7 @@ public class CocktailRecommender {
 
                 for (int row = 0; row < array.length; row++) {
                   if (c1 == array[row][0]) {
-                    Indexes.add(row); //Insert the indexes of the cocktails which satisfy the first user's choice}
+                    Indexes.add(row); //Insert the indexes of the cocktails which satisfy the first user's choice
                   }
                 }
 
@@ -31,6 +31,7 @@ public class CocktailRecommender {
                     k += 1;
                 } else {
                     Indexes.remove(Indexes.get(i));
+                    i--;
                 }
                 i +=1;
 
@@ -38,7 +39,7 @@ public class CocktailRecommender {
         }
         // Creation of method which removes the cocktail's that dont follow whith the thirth user's choice and finally returns the index of the wanted coktail.
         public static int Finalindex(final int c3,LinkedList<Integer> IndexOfCocktails2, final int array[][]) {
-           for (int i=0; i<Indexes.size(); i++) {
+           for (int i=Indexes.sizes()-1; i>=0; i--) {
                 if (array[Indexes.get(i)][c3] != c3) {
                     Indexes.remove(i);
                 }
