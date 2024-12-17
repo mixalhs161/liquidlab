@@ -14,8 +14,8 @@ public class CocktailRecommender {
 
 
     }
-        public CoctailRecommender(LinkedList<Integer> Indexes) {
-            CoctailRecommender.Indexes = Indexes;
+        public CocktailRecommender(LinkedList<Integer> Indexes) {
+            CocktailRecommender.Indexes = Indexes;
         }
 
 
