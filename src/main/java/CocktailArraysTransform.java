@@ -1,4 +1,4 @@
-public class CoctailArraysTransform {
+public class CocktailArraysTransform {
 
     public static int[][] transformCoctailIng(String[][] coctailIng) {
         // Δημιουργία πίνακα για αποθήκευση των αριθμητικών δεδομένων
