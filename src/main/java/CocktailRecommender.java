@@ -20,9 +20,10 @@ public class CocktailRecommender {
 
 
 
+
         // Creation of a method that removes the cocktails which don't follow the user's preference for the second choice.
         public static void IndexOfCocktails2(final int c2,LinkedList<Integer> IndexOfCocktail1, final int array[][]) {
-            int k = 1;
+            int k = 0;
             int i = 0;
             while (k < EXPC2) {
 
