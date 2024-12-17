@@ -1,4 +1,4 @@
-public class CoctailArrays {
+public class CocktailArrays {
 
     // Ονόματα κοκτέιλ
 String[] cocktailsNames = {
@@ -15,7 +15,7 @@ String[] cocktailsNames = {
     "Tequila Sour"
     };
 
-String[][] coctailIng = {
+String[][] cocktailIng = {
      // Whiskey
     {"Whiskey", "Medium", "Sour"},
     {"Whiskey", "Strong", "Bitter"},
@@ -74,5 +74,5 @@ String[][] coctailIng = {
 
 
 
-    int[][] transformedCoctailIng = CoctailArraysTransform.transformCoctailIng(coctailIng);
+    int[][] transformedCoctailIng = CocktailArraysTransform.transformCoctailIng(cocktailIng);
 }
