@@ -1,5 +1,5 @@
 public class LiquidLab {
-    public static void liquidLab(String[] args) {
+    public static void main(String[] args) {
         InsertValues iv1 = new InsertValues();
         boolean success = false;
 
