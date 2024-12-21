@@ -2,7 +2,7 @@ import java.util.LinkedList;
 
 public class CocktailRecommender {
     public static final int  EXPC2 = 3;
-    public static LinkedList<Integer> Indexes Indexofcocktail1(int c1, int array[][]) {
+    public static LinkedList<Integer>  Indexofcocktail1(int c1, int array[][]) {
         LinkedList <Integer> Indexes = new LinkedList<>();
         for (int i = 0; i<array.length; i++) {
             if (array[i][0] == c1) {
@@ -11,7 +11,7 @@ public class CocktailRecommender {
         }
         return Indexes;
     }
-    public static LinkedList<Integer> Indexes Indexofcocktail2(int c2, LinkedList Indexes,int array[][]) {
+    public static LinkedList<Integer> Indexofcocktail2(int c2, LinkedList Indexes,int array[][]) {
         for (int i=0; i<Indexes.size(); i++) {
             int k = 0;
             if (array[Indexes.get(i)][1] == c2) {
@@ -27,7 +27,13 @@ public class CocktailRecommender {
         return Indexes;
     }
     public static int finalIndex(int c3, LinkedList Indexes, int array[][]) {
-        for
+        for (int i = Indexes.size()-1; i>=0; i-- ) {
+            if (array[Indexes.get(i)][2] == c3) {
+                return Indexes.get(i);
+            } else {
+                Indexes.remove(i);
+            }
+        }
     }
 
 }
