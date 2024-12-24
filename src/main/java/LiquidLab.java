@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class LiquidLab {
     public static void main(String[] args) {
         InsertValues iv1 = new InsertValues();
@@ -25,5 +27,12 @@ public class LiquidLab {
                 baseSet = true;   // Η βάση είναι σωστή
             }
         }
+        CocktailArrays ca = new CocktailArrays();
+
+        LinkedList <Integer> Indexes =  CocktailRecommender.Indexofcocktail1(iv1.getValues()/100, CocktailArraysTransform.transformCoctailIng(ca.cocktailIng));
+        Indexes = CocktailRecommender.Indexofcocktail2(iv1.getValues()%100/10, Indexes, CocktailArraysTransform.transformCoctailIng(ca.cocktailIng));
+        Indexes = CocktailRecommender.finalIndex(iv1.getValues()%10,Indexes,CocktailArraysTransform.transformCoctailIng(ca.cocktailIng));
+        String cocktailofchoice = ca.cocktailsNames[Indexes.getFirst()];
+        System.out.println("Your cocktail of choice is " + cocktailofchoice);
     }
 }
