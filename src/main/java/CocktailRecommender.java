@@ -11,10 +11,10 @@ public class CocktailRecommender {
         }
         return Indexes;
     }
-    public static LinkedList<Integer> Indexofcocktail2(int c2, LinkedList Indexes,int array[][]) {
+    public static LinkedList<Integer> Indexofcocktail2(int c2, LinkedList<Integer> Indexes,int array[][]) {
         for (int i=0; i<Indexes.size(); i++) {
             int k = 0;
-            if (array[Indexes.get(i)][1] == c2) {
+            if (array[(int)Indexes.get(i)][1] == c2) {
                 k +=1;
             } else {
                 Indexes.remove(i);
@@ -26,14 +26,14 @@ public class CocktailRecommender {
         }
         return Indexes;
     }
-    public static int finalIndex(int c3, LinkedList Indexes, int array[][]) {
-        for (int i = Indexes.size()-1; i>=0; i-- ) {
-            if (array[Indexes.get(i)][2] == c3) {
-                return Indexes.get(i);
-            } else {
-                Indexes.remove(i);
+    public static LinkedList<Integer> finalIndex(int c3, LinkedList<Integer> Indexes, int array[][]) {
+        for (int i = Indexes.size() - 1; i > 0; i--) {
+            int index = Indexes.get(i);
+            if (array[index][2] != c3) {
+               Indexes.remove(i);
             }
         }
-    }
+        return Indexes;
 
+    }
 }
