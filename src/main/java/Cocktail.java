@@ -42,5 +42,5 @@ public class Cocktail {
     @Override
     public String toString() {
         return "Cocktail: " + base + ", " + intensity + ", " + flavor;
-    };
+    }
 }
