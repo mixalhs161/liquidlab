@@ -26,7 +26,7 @@ public class InsertValues {
         validateIntensity(intensity);
 
         // Δημιουργία αντικειμένου Cocktail
-        Coctail cock = new Coctail(base, flavor, intensity);
+        Cocktail cock = new Cocktail(base, flavor, intensity);
         System.out.println("Cocktail created: " + cock);
     }
 
@@ -51,4 +51,11 @@ public class InsertValues {
             throw new AlcoholContentException("Invalid intensity: " + intensity);
         }
     }
+    public int getValues() {
+        UserChoiceTransform uct =  new UserChoiceTransform();
+        int k = uct.transformChoice(base, flavor, intensity);
+        return k;
+
+    }
+
 }

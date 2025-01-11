@@ -1,49 +1,42 @@
 import java.util.LinkedList;
 
 public class CocktailRecommender {
-    private final static int EXPC2 = 3; //expected remaining coctails in the second search
-    public static LinkedList <Integer> Indexes = new LinkedList<Integer>(); // Creation of a list in order to store the indexes of the cocktails that satisfy the user's choice.
-    // Creation of a method that insert's the indexes of the cocktails in the list which statisfy the user's first choice.
-    public static void IndexOfCocktail1(final int c1,  final int array[][]) {
-
-                for (int row = 0; row < array.length; row++) {
-                  if (c1 == array[row][0]) {
-                    Indexes.add(row); //Insert the indexes of the cocktails which satisfy the first user's choice
-                  }
-                }
-
+    public static final int  EXPC2 = 3; // Σταθερά η οποια χρησιμοποιείται για να μην γινονται περιττες αναζητησεις στην 2η αναζητηση
+    // Δημιουργία πρώτης μεθόδου στην οποία δημιουργείται λίστα για να "φυλάει" τους δεικτες των κοκτειλ σύμφωνα με την πρώτη επιλογή του χρήστη
+    public static LinkedList<Integer>  Indexofcocktail1(int c1, int array[][]) {
+        LinkedList <Integer> Indexes = new LinkedList<>();// Δημιουργία λίστας
+        for (int i = 0; i<array.length; i++) {
+            if (array[i][0] == c1) {
+                Indexes.add(i);
+            }
+        }
+        return Indexes;
+    }
+    //Δημιουργία μεθοδου στην οποία αφαιρούνται τα στοιχεία που δεν συμβαδίζουν με την δεύτερη επιλογή τοου χρήστη
+    public static LinkedList<Integer> Indexofcocktail2(int c2, LinkedList<Integer> Indexes,int array[][]) {
+        for (int i=0; i<Indexes.size(); i++) {
+            int k = 0;
+            if (array[(int)Indexes.get(i)][1] == c2) {
+                k +=1;
+            } else {
+                Indexes.remove(i);
+                i--;
+            }
+            if (k == EXPC2) {
+                break;
+            }
+        }
+        return Indexes;
+    }
+    // Δημιουργία μεθόδου η οποία επιστρεφει το τελικο κοκτειλ
+    public static LinkedList<Integer> finalIndex(int c3, LinkedList<Integer> Indexes, int array[][]) {
+        for (int i = Indexes.size() - 1; i > 0; i--) {
+            int index = Indexes.get(i);
+            if (array[index][2] != c3) {
+               Indexes.remove(i);
+            }
+        }
+        return Indexes;
 
     }
-        public CocktailRecommender(LinkedList<Integer> Indexes) {
-            CocktailRecommender.Indexes = Indexes;
-        }
-
-
-
-
-        // Creation of a method that removes the cocktails which don't follow the user's preference for the second choice.
-        public static void IndexOfCocktails2(final int c2,LinkedList<Integer> IndexOfCocktail1, final int array[][]) {
-            int k = 0;
-            int i = 0;
-            while (k < EXPC2) {
-
-                if (array[Indexes.get(i)][1] == c2) {
-                    k += 1;
-                } else {
-                    Indexes.remove(Indexes.get(i));
-                    i--;
-                }
-                i +=1;
-
-            }
-        }
-        // Creation of method which removes the cocktail's that dont follow whith the thirth user's choice and finally returns the index of the wanted coktail.
-        public static int Finalindex(final int c3,LinkedList<Integer> IndexOfCocktails2, final int array[][]) {
-           for (int i=Indexes.sizes()-1; i>=0; i--) {
-                if (array[Indexes.get(i)][c3] != c3) {
-                    Indexes.remove(i);
-                }
-            }
-           return Indexes.getFirst();
-        }
 }
