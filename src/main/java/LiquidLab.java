@@ -2,6 +2,11 @@ import java.util.LinkedList;
 
 public class LiquidLab {
     public static void main(String[] args) {
+        System.out.println("Welcome to our app, we will help you choose the cocktail of your liking.");
+        System.out.println("Here is your options:");
+        System.out.println("BASE: whiskey, gin, vodka, rum, tequila");
+        System.out.println("FLAVOUR:sweet,bitter,sour");
+        System.out.println("INTENSITY:light,medium,sour");
         InsertValues iv1 = new InsertValues();
         boolean success = false;
         boolean baseSet = false;   // Για να παρακολουθούμε αν η βάση είναι σωστή
