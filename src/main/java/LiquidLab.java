@@ -6,7 +6,7 @@ public class LiquidLab {
         System.out.println("Here is your options:");
         System.out.println("BASE: whiskey, gin, vodka, rum, tequila");
         System.out.println("FLAVOUR:sweet,bitter,sour");
-        System.out.println("INTENSITY:light,medium,sour");
+        System.out.println("INTENSITY:light,medium,strong");
         InsertValues iv1 = new InsertValues();
         boolean success = false;
         boolean baseSet = false;   // Για να παρακολουθούμε αν η βάση είναι σωστή
