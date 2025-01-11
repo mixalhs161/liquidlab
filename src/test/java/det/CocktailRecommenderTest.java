@@ -1,3 +1,5 @@
+mport static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.LinkedList;
@@ -14,7 +16,7 @@ public class CocktailRecommenderTest {
         }
         // Τα υπόλοιπα στοιχεία δεν έχουν c1 = 1
         for (int i = 9; i < 45; i++) {
-            array[i][0] = 2
+            array[i][0] = 2;
         }
 
         LinkedList<Integer> result = CocktailRecommender.Indexofcocktail1(1, array);
@@ -84,3 +86,4 @@ public class CocktailRecommenderTest {
         assertTrue(result.contains(0));
     }
 }
+
