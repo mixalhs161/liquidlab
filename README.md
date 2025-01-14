@@ -12,28 +12,33 @@ src
 
 #The structure of the repository's files is the following
 
-├── main\java
-│   ├── AlcoholContentException.java
-│   ├── Cocktail.java
-│   ├── CocktailArrays.java
-│   ├── CocktailArraysTransform.java
-│   ├── CocktailRecommender.java
-│   ├── DrinkBaseException.java
-│   ├── FlavourException.java
-│   ├── InsertValues.java
-│   ├── LiquidLab.java
-│   └── UserChoiceTransform.java
-├── test\java\det
-│   ├── CocktailRecommenderTest.java
-│   ├── CocktailArraysTransformTest.java
-│   └── UserChoiceTransform.java
+├── src
+│   └── main
+│       └── java
+│           ├── AlcoholContentException.java
+│           ├── Cocktail.java
+│           ├── CocktailArrays.java
+│           ├── CocktailArraysTransform.java
+│           ├── CocktailRecommender.java
+│           ├── DrinkBaseException.java
+│           ├── FlavourException.java
+│           ├── InsertValues.java
+│           ├── LiquidLab.java
+│           └── UserChoiceTransform.java
+├── test
+│   └── java
+│       └── det
+│           ├── CocktailRecommenderTest.java
+│           ├── CocktailArraysTransformTest.java
+│           └── UserChoiceTransform.java
+├── images
 ├── target
 ├── pom.xml
 └── README.md
 
-#The uml diagram
 
-![UML DIAGRAM] (d2uml.png)
+#The uml diagram
+![UML DIAGRAM] (images/d2uml.png)
 
 
 #data structures
