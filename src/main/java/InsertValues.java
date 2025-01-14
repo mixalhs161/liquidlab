@@ -3,19 +3,26 @@ import java.util.Scanner;
 public class InsertValues {
 
     private Scanner scanner = new Scanner(System.in);
+    private String base;     // Για αποθήκευση της βάσης
+    private String flavor;   // Για αποθήκευση της γεύσης
+    private String intensity; // Για αποθήκευση της έντασης
 
     // Μέθοδος για εισαγωγή τιμών
-    public void insert() throws DrinkBaseException, FlavourException, AlcoholContentException {
-        System.out.print("Enter base: ");
-        String base = scanner.nextLine();
-        validateBase(base);
+    public void insert(boolean baseSet, boolean flavorSet) throws DrinkBaseException, FlavourException, AlcoholContentException {
+        if (!baseSet) { // Ζητάει τη βάση μόνο αν δεν έχει ήδη οριστεί σωστή
+            System.out.print("Enter base: ");
+            base = scanner.nextLine();
+            validateBase(base);
+        }
 
-        System.out.print("Enter flavor: ");
-        String flavor = scanner.nextLine();
-        validateFlavor(flavor);
+        if (!flavorSet) { // Ζητάει τη γεύση μόνο αν δεν έχει ήδη οριστεί σωστή
+            System.out.print("Enter flavor: ");
+            flavor = scanner.nextLine();
+            validateFlavor(flavor);
+        }
 
         System.out.print("Enter intensity: ");
-        String intensity = scanner.nextLine();
+        intensity = scanner.nextLine();
         validateIntensity(intensity);
 
         // Δημιουργία αντικειμένου Cocktail
@@ -44,4 +51,11 @@ public class InsertValues {
             throw new AlcoholContentException("Invalid intensity: " + intensity);
         }
     }
+    public int getValues() {
+        UserChoiceTransform uct =  new UserChoiceTransform();
+        int k = uct.transformChoice(base, flavor, intensity);
+        return k;
+
+    }
+
 }
