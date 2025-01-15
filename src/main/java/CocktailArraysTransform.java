@@ -1,6 +1,6 @@
 public class CocktailArraysTransform {
 
-    public static int[][] transformCocktailIng(String[][] cocktailIng) {
+    public static int[][] transformCoctailIng(String[][] cocktailIng) {
         // Δημιουργία πίνακα για αποθήκευση των αριθμητικών δεδομένων
         int[][] transform = new int[cocktailIng.length][3];
 
