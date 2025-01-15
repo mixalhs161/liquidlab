@@ -7,7 +7,7 @@ To compile LiquidLab.java, from the command line navigate to liquilab and then r
 
 ## Execution instructions
 To run LiquidLab, from the command line run the following command:
-- java -jar liquidlab.jar
+- java -jar target/liquidlab.jar
 
 
 
