@@ -6,7 +6,7 @@
 
   <groupId>Team9</groupId>
   <artifactId>liquidlab</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>liquidlab</name>
 
   <properties>
@@ -26,7 +26,8 @@
   </dependencies>
 
 
- <build>
+<build>
+  <finalName>liquidlab</finalName>
   <plugins>
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
@@ -42,5 +43,6 @@
     </plugin>
   </plugins>
 </build>
+
 
 </project>
